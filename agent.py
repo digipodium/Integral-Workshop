@@ -60,10 +60,7 @@ if st.button("Detect Intent"):
     if user_input.strip() == "":
         st.warning("Please type something!")
     else:
-        user_vec = vectorizer.transform([user_input])
-        similarity = cosine_similarity(user_vec, X)
-        index = similarity.argmax()
-        detected_intent = intents[index]
+        #logic goes here
 
         st.success(f"Detected Intent → **{detected_intent}**")
 
